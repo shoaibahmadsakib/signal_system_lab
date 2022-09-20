@@ -384,12 +384,12 @@ plot(t,x)
 k=0;
 for f=0:1:800
     k=k+1;
-    X(k)=trapz(t,x.*exp(-j*2*pi*f*t));
+    X(k)=trapz(t,x.*exp(-j*2*pi*f*t)); %Trapezoidal numerical integration
+%Q = trapz(X,Y) integrates Y with respect to the coordinates or scalar spacing specified by X.
 end
 f=0:800;
 subplot(2,1,2);
 plot(f, abs(X));
-
 
 
 
